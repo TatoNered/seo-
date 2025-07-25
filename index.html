@@ -23,7 +23,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
         }
 
         .resume-card {
@@ -49,7 +49,7 @@
         .header {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 40px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -77,14 +77,14 @@
         }
 
         .name {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .title {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3vw, 1.5rem);
             font-weight: 300;
             opacity: 0.9;
             margin-bottom: 30px;
@@ -93,37 +93,39 @@
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
+            gap: 8px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            word-break: break-all;
         }
 
         .contact-item i {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            padding: 50px 40px;
+            gap: 30px;
+            padding: 30px 20px;
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 4vw, 2rem);
             font-weight: 600;
             color: #2c3e50;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
@@ -141,9 +143,9 @@
 
         .experience-item {
             background: #f8f9fa;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-left: 5px solid #3498db;
             transition: all 0.3s ease;
             position: relative;
@@ -166,47 +168,49 @@
         }
 
         .experience-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .company-name {
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 10px;
+            word-wrap: break-word;
         }
 
         .project-list {
             color: #666;
-            font-size: 1rem;
-            line-height: 1.8;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            line-height: 1.6;
+            word-wrap: break-word;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
         }
 
         .skill-category {
             background: #f8f9fa;
-            padding: 25px;
+            padding: 20px 15px;
             border-radius: 15px;
             text-align: center;
             transition: all 0.3s ease;
         }
 
         .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             background: linear-gradient(135deg, #3498db, #9b59b6);
             color: white;
         }
 
         .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 10px;
             color: #3498db;
             transition: color 0.3s ease;
         }
@@ -216,25 +220,26 @@
         }
 
         .skill-name {
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
             font-weight: 600;
+            word-wrap: break-word;
         }
 
         .services-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 50px 40px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         .services-title {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .services-description {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             margin-bottom: 30px;
             opacity: 0.9;
         }
@@ -244,10 +249,10 @@
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             color: white;
-            padding: 15px 40px;
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             font-weight: 600;
             border: 2px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
@@ -255,21 +260,21 @@
 
         .cta-button:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .specialties {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             margin-top: 30px;
         }
 
         .specialty-item {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 30px;
+            padding: 25px 15px;
             border-radius: 15px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -277,42 +282,253 @@
         }
 
         .specialty-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.2);
         }
 
         .specialty-icon {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 15px;
         }
 
         .specialty-title {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             font-weight: 600;
             margin-bottom: 10px;
+            word-wrap: break-word;
         }
 
+        .specialty-item p {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        /* Планшеты */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-content {
+                gap: 25px;
+                padding: 25px 15px;
+            }
+            
+            .specialties {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        /* Мобильные устройства */
         @media (max-width: 768px) {
+            .container {
+                padding: 5px;
+            }
+            
             .main-content {
                 grid-template-columns: 1fr;
-                padding: 30px 20px;
-            }
-
-            .name {
-                font-size: 2.5rem;
+                padding: 20px 15px;
+                gap: 20px;
             }
 
             .contact-info {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
 
             .header {
-                padding: 40px 20px;
+                padding: 30px 15px;
             }
 
             .services-section {
-                padding: 40px 20px;
+                padding: 30px 15px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+            }
+            
+            .skill-category {
+                padding: 15px 10px;
+            }
+            
+            .specialties {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .specialty-item {
+                padding: 20px 15px;
+            }
+            
+            .experience-item {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Очень маленькие экраны */
+        @media (max-width: 480px) {
+            .resume-card {
+                border-radius: 10px;
+                margin: 5px;
+            }
+            
+            .header {
+                padding: 25px 10px;
+                border-radius: 10px 10px 0 0;
+            }
+            
+            .main-content {
+                padding: 15px 10px;
+            }
+            
+            .services-section {
+                padding: 25px 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            
+            .skill-category {
+                padding: 12px 8px;
+            }
+            
+            .experience-item {
+                padding: 12px;
+                border-radius: 10px;
+            }
+            
+            .specialty-item {
+                padding: 15px 10px;
+            }
+            
+            .contact-item {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Очень большие экраны */
+        @media (min-width: 1440px) {
+            .container {
+                padding: 30px;
+            }
+            
+            .header {
+                padding: 70px 50px;
+            }
+            
+            .main-content {
+                padding: 60px 50px;
+                gap: 50px;
+            }
+            
+            .services-section {
+                padding: 60px 50px;
+            }
+        }
+
+        /* Ландшафтная ориентация для планшетов */
+        @media (max-width: 1024px) and (orientation: landscape) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .specialties {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Портретная ориентация для планшетов */
+        @media (max-width: 768px) and (orientation: portrait) {
+            .specialties {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Высокая плотность пикселей */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .experience-item,
+            .skill-category,
+            .specialty-item {
+                border: 0.5px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Сенсорные устройства */
+        @media (hover: none) and (pointer: coarse) {
+            .experience-item:hover,
+            .skill-category:hover,
+            .specialty-item:hover,
+            .cta-button:hover {
+                transform: none;
+            }
+            
+            .experience-item:active,
+            .skill-category:active,
+            .specialty-item:active {
+                transform: scale(0.98);
+            }
+        }
+
+        /* Темная тема */
+        @media (prefers-color-scheme: dark) {
+            .resume-card {
+                background: rgba(30, 30, 30, 0.95);
+                color: #e0e0e0;
+            }
+            
+            .experience-item,
+            .skill-category {
+                background: #2a2a2a;
+                color: #e0e0e0;
+            }
+            
+            .company-name,
+            .section-title {
+                color: #4dabf7;
+            }
+            
+            .project-list {
+                color: #b0b0b0;
+            }
+        }
+
+        /* Пониженная анимация для пользователей с проблемами вестибулярного аппарата */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            ::before,
+            ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Поддержка печати */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .resume-card {
+                background: white;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .services-section {
+                background: #667eea !important;
+                -webkit-print-color-adjust: exact;
             }
         }
     </style>
@@ -405,7 +621,7 @@
                 </div>
             </div>
 
-            <div class="section" style="padding: 0 40px 30px;">
+            <div class="section" style="padding: 0 20px 30px;">
                 <h2 class="section-title">
                     <i class="fas fa-cogs"></i> Экспертиза
                 </h2>
@@ -532,6 +748,11 @@
                 }
             });
         });
+
+        // Оптимизация для сенсорных устройств
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+        }
     </script>
 </body>
 </html>
